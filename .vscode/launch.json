@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch chatServer.ts",
+        "runtimeExecutable": "ts-node",  // استفاده از ts-node
+        "runtimeArgs": [
+          "-r",
+          "./server/node_modules/tsconfig-paths/register",
+          "-P",
+          "./server/tsconfig.json"     // فایل tsconfig
+        ],
+        "args": [
+          "./server/chatServer.ts"      // مسیر فایل اصلی TypeScript
+        ],
+        "cwd": "${workspaceFolder}",   // پوشه کاری پروژه
+        "outFiles": [
+          "${workspaceFolder}/dist/**/*.js"  // فایل‌های جاوااسکریپت کامپایل‌شده
+        ],
+        "sourceMaps": true             // فعال‌سازی نقشه‌های منبع برای دیباگ
+      }
+    ]
+  }
+  
